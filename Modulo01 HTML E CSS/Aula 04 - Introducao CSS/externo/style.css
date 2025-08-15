@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap);
+
+/*Iremos aprender semana que vem*/
+* {
+    margin: 0;
+    pedding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: aqua;
+}
+
+header {
+    background-color: azure; /*Muda cor de Fundo*/
+}
+
+main {
+    font-size: 16px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    text-align:justify;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 2;
+    font-size: 1.5rem;
+    text-indent: 5px;
+    font-weight: bolder;
+    color: blue;
+    color: #FFFFFF;
+}
+
+div{
+    font-size: 16px;
+}
+
+    main > section > div > p {
+        font-size: 1em;
+        color: brown;
+
+    }
