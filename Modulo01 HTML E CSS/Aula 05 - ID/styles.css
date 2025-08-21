@@ -1,0 +1,47 @@
+main {
+    margin: 12px auto;
+    
+}
+
+#titulo1 {
+    color: black;
+    background-color: sienna;
+    text-align: center;
+}
+
+#titulo2 {
+    color:white;
+    background-color: #ffd7c4;
+    text-align: center;
+}
+
+#titulo3 {
+    color:black;
+    background-color:rgb(4, 70, 146);
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+}
+
+.texto-titulo1 {
+    color: #ffffff;
+    background-color: #0a6c62;
+}
+
+.texto-titulo2 {
+    color: #a10b33;
+    background-color: rgb(26, 173, 193);
+}
+
+.texto-titulo3 {
+    color: #133935;
+    background-color: green;
+}
+

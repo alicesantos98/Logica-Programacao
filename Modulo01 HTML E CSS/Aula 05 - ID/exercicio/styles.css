@@ -1,0 +1,65 @@
+/*Padrões*/
+
+body {
+    width: 80%;
+    align-items: center;
+    background-color: #f8f3ec;
+    margin: auto;
+}
+
+/*Fundo*/
+
+.background{
+    background-color: #c6c6ae;
+    text-align: center;
+}
+
+/*Titulos*/
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    background-color: #7f99c8;
+    text-align: center;
+}
+
+h2 {
+    font-family:Arial, Helvetica, sans-serif ;
+    background-color: #ab92be;
+    font-size: 30px;
+    text-align: center;
+}
+
+/*Paragrafos*/
+
+p {
+    text-align: left;
+}
+
+/*Tag ancora*/
+
+.link {
+    text-decoration: none;
+    text-align: center;
+    color: #1b5006;
+    font-size: 25px;
+}
+
+/*Personalizações Individuais*/
+
+h1.titulo1 {
+    color: white;
+}
+
+h2.titulo2 {
+    color: #414f0f;
+}
+
+p.parag {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(63, 29, 95);
+}
+
+
+
