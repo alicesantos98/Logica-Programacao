@@ -1,0 +1,45 @@
+body {
+    width: 80%;
+    align-items: center;
+    background-color: #86629cd3;
+    margin: auto;
+}
+nav{
+    margin: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 45%;
+    color:black
+}
+
+.card {
+    width: 180px;
+    border: 3px white;
+    box-shadow: 2px 2px 8px wheat;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    color: black;
+    display: inline-block; 
+}
+
+
+header {
+    background-color: black;
+}
+
+main {
+    margin: auto;
+    width: 60vw;
+    box-shadow: 2px 2px 20px solid #0000008c;
+    border-radius: 15px;
+    border: 1px solid;
+}
+
+
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:black;
+}
