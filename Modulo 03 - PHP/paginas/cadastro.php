@@ -42,38 +42,54 @@
                 <option value="cc">Ciências da Computação</option>
             </select>
 
-            <input type="submit" value="Cadastrar">
+            <input type="submit" value="Cadastrar"></input>
 
 </form>
     </main>
 
     <?php
-    
+
+       try {
         if($_SERVER["REQUEST_METHOD"] == "POST"){
-           include("../conexao/conexao.php");
-           
-           $nome = $_POST["nome"];
-           $sobrenome = $_POST["sobrenome"];
-           $email = $_POST["email"];
-           $curso = $_POST["curso"];
+            include("../conexao/conexao.php");
+            
+            $nome = $_POST["nome"];
+            $sobrenome = $_POST["sobrenome"];
+            $email = $_POST["email"];
+            $curso = $_POST["curso"];
+ 
+            //criar
+            $hoje = new DateTime();
+            $id = $hoje->format("Ym") . rand(100,999);
+ 
+            $sql = "INSERT INTO usuários (id, nome, sobrenome, email, curso) values (?,?,?,?,?)";
+            $stmt = $conn->prepare($sql);
+ 
+            $stmt->bind_param("issss",$id,$nome,$sobrenome,$email,$curso);
+            $stmt->execute();
+ 
+            echo "div class='mensagem sucesso'>Usuário cadastrado com sucesso </div>";
+            $stmt->close();
+            $conn->close();
 
-           //criar
-           $hoje = new DateTime();
-           $id = $hoje->format("Ym") . rand(100,999);
+       }
+    }
 
-           sql = "INSERT INTO usuarios (id, nome, sobrenome, email, curso) values (?,?,?,?,?)";
-           $stmt = $conn->prepare($sql);
+    catch (mysqli_sql_exception $e){
 
-           $stmt->bind_param("issss",$id,$nome,$sobrenome,$email,$curso);
-           $stmt->execute();
-
-           echo "div class='mensagem sucesso'>Usuário cadastrado com sucesso </div>"
-           $stmt->();
-           $conn->close();
-
+        if (str_contains($e->getMessage(), "Duplicate entry")) { //verifica se na variavel existe a mensagem duplicate
+            echo "<div class='mensagem erro'>E-mail já está cadastrado </div>";
+        } 
+        else {
+            echo "<div class='mensagem erro'>Erro ao cadastrar, tente novamente mais tarde</div>";
+            
         }
+        
+    }
+    
+        
 
-    ?>
+?>
     
 </body>
 </html>
